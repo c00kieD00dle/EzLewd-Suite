@@ -1,0 +1,10 @@
+﻿Id: UpdateChecker_31262731-3b8f-41e7-aab4-ab6dce85af06
+Name: EzLewdUpdater
+Author: c00kieD00dle
+Version: 1.0
+Module: UpdateChecker.dll
+Type: GenericPlugin
+Icon: icon.png
+Link:
+    - Name: GitHub
+      Url: https://github.com/c00kieD00dle/EzLewdUpdater
