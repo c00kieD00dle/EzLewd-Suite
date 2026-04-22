@@ -1,30 +1,24 @@
 # EzLewd Suite
 
-A Playnite extension that adds adult games from F95 threads in seconds and keeps them updated forever—auto-fetches covers, descriptions, developers, tags, screenshots, and notifies you when a new version drops.
+A Playnite extension that adds adult games from F95 threads in seconds and keeps them updated forever—auto-fetch covers, tags, screenshots and notify when a new version drops.
 
 ## What it does
 
-- **Smart Import:** Feed it an F95 thread URL. It creates a complete game entry with:
-  - Clean Game Name (no version numbers in title)
-  - Cover & Background
-  - Full Description, Developer, and External Links (Patreon, Discord, etc.)
-  - Correct Genres (Ren'Py, VN, Unity, etc.)
-  - Screenshots (downloaded to your ExtraMetadata folder)
-- **Auto-Updates:** It remembers the F95 link and checks the page forever.
-- **Smart Status:** Detects if a game is marked "Completed" on F95 and tags it accordingly, automatically stopping update checks for that game.
+- Feed it an F95 thread URL - it creates a complete game entry (cover, tags, folders, screenshots).  
+- It remembers that link and checks the page forever, pinging you the moment a new version drops.  
+- Use only the updater, only the adder, or both.
 
 ## First-start checklist (do once)
 
 Open Playnite → Add-ons → EzLewd Suite → Settings  
-1. **Login:** Click "Login to F95Zone" (a window will pop up to capture your session).  
-2. **Library Folder:** Pick where you want new games to be installed (e.g., `C:\Games\F95`).  
-3. **Screenshots Folder:** Pick your Screenshots directory (e.g. `...\Playnite\Screenshots`).  
+- Log in to F95 (WebView window will pop up).  
+- Pick your Library Games folder (where new games will be installed).  
+- Pick your Extra Metadata directory for the screenshots(usually `\AppData\Local\Playnite\ExtraMetadata`) so screenshots work.  
+- Adjust the version regex or excluded keywords if you need to.    
 
 The extension is now ready.
 
-4. **If ScreenshotsVisualizer is installed:** Set its directory to the same directory as EzLewd and add `\{GameId}` (e.g. `...\Playnite\Screenshots\{GameID}`)
-
-## Add a new game
+## Add a new game (30 s)
 
 1. Copy any F95 thread URL.  
 2. Playnite main menu → “Add Game from F95 Link” → paste → OK.  
@@ -36,16 +30,18 @@ Afterwards (once per game):
 - Edit the game → Installation → mark as installed → point the action to the .exe (or index.html for browser titles).
 
 ## Update checking (zero effort after setup)
-  
-- The plugin compares the local **Version Field** with the one in the F95 thread.  
+
+- Make sure the game name contains the version, e.g.  
+  `My Game [v1.2.0]`  
+  (default regex extracts everything between [ and ] that contains a digit).  
+- The plugin compares the local version with the one in the F95 thread title.  
   If they differ → toast notification.  
 - Click the toast to open the thread or jump straight to the game in your library (toggle in settings).
-- Games marked as **"Completed"** (via Feature tag) are skipped automatically.
-- You can deactivate the Update checking or exclude games from it in the settings.
 
 ## Good-practice reminders
 
-- After you install a new version change the version of the game.  
+- Keep the version string inside the game name - the plugin only looks there.  
+- After you install a new version rename the game to match, e.g. [v1.3].  
 - Use the “Hidden” platform filter to hide all F95 games from your main grid.  
 - The updater never guesses URLs - it only touches games that already have an f95 link, so your library stays clean.
 
@@ -53,10 +49,7 @@ Afterwards (once per game):
 
 - Playnite 10.37+  
 - .NET Framework 4.6.2 (already included)  
-
-**Recommendations:** 
-- ScreenshotsVisualizer
-- Helium or any other Theme to nicely display the screenshots on the gamepage
+- ScreenshotsVisualizer (optional) – the adder creates the exact folder structure (`ExtraMetadata/<game-id>/Screenshots`) that the visualizer expects.
 
 ## Found a bug?
 
