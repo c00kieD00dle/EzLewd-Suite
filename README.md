@@ -1,11 +1,11 @@
 # EzLewd Suite
 
-*Formerly EzLewdUpdater.* A **Playnite** extension for games from **F95Zone**. Add a game to your library
+A **Playnite** extension for games from **F95Zone**. Add a game to your library
 straight from its F95 thread, and get notified when a new version is released.
 
 ---
 
-## ✅ Features
+## Features
 
 - **Add games from an F95 link.** Name, version, developer, description, tags,
   engine (Ren'Py, Unity, …) and links are filled in from the thread. Games marked
@@ -28,7 +28,7 @@ straight from its F95 thread, and get notified when a new version is released.
 
 ---
 
-## 🛠 Requirements
+## Requirements
 
 - **Playnite 10** (current release)
 - An **F95Zone account**. You log in once from the extension settings.
@@ -37,7 +37,7 @@ straight from its F95 thread, and get notified when a new version is released.
 
 ---
 
-## 🚀 Getting started
+## Getting started
 
 1. Install the extension and restart Playnite.
 2. Open **Add-ons → Extensions settings → Generic → EzLewd Suite**.
@@ -48,7 +48,7 @@ straight from its F95 thread, and get notified when a new version is released.
 
 ---
 
-## 🔍 How the update check works
+## How the update check works
 
 The check runs when Playnite starts (can be turned off) or when you choose
 **Check Game Updates** in the main menu.
@@ -78,7 +78,7 @@ The check runs when Playnite starts (can be turned off) or when you choose
 
 ---
 
-## ⚙️ Settings
+## Settings
 
 **Update Checking tab**
 
@@ -111,7 +111,7 @@ The check runs when Playnite starts (can be turned off) or when you choose
 
 ---
 
-## 🌐 Browser integration
+## Browser integration
 
 Opening one of these links (for example from a userscript or bookmarklet)
 starts an import in Playnite. The F95 link must be URL-encoded.
@@ -123,7 +123,7 @@ playnite://ezlewdupdater/quickadd/<encoded F95 link>
 
 ---
 
-## 🖼 Images and AVIF
+## Images and AVIF
 
 F95Zone delivers its images in the AVIF format. The extension converts them to
 PNG/JPEG while downloading. Windows can only read AVIF with the free
