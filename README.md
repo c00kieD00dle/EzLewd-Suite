@@ -113,8 +113,19 @@ The check runs when Playnite starts (can be turned off) or when you choose
 
 ## Browser integration
 
-Opening one of these links (for example from a userscript or bookmarklet)
-starts an import in Playnite. The F95 link must be URL-encoded.
+Two [Tampermonkey](https://www.tampermonkey.net/) scripts add **Add to playnite**
+and **Quickadd to playnite** buttons to F95Zone. Click a link to install; Tampermonkey
+keeps them up to date.
+
+- [Game threads](https://raw.githubusercontent.com/c00kieD00dle/EzLewd-Suite/main/userscripts/f95-playnite-thread.user.js):
+  buttons next to *Watch* on every game thread.
+- [Latest Updates page](https://raw.githubusercontent.com/c00kieD00dle/EzLewd-Suite/main/userscripts/f95-playnite-latest-updates.user.js):
+  buttons under every game.
+
+If you still have the old "F95zone playnite" script installed, remove it.
+
+The buttons open links like these, which you can also use from your own
+scripts or bookmarklets. The F95 link must be URL-encoded.
 
 ```
 playnite://ezlewdupdater/add/<encoded F95 link>
