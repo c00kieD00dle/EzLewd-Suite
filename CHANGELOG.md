@@ -1,6 +1,21 @@
 # Changelog
 
-## 1.4.0 (unreleased)
+## 1.4.1
+
+### Fixed
+
+- Adding a game that is already in your library selects the existing entry
+  again instead of creating a duplicate. Before, this only worked until the
+  game's next update: F95 puts the version into the thread link, so the link
+  stored at import no longer matched. Games are now recognized by their thread
+  number, which never changes.
+- Cancelling the image picker now cancels the import. Before, the game was
+  still added (without images) and its folder was created. Now the game is not
+  added, and the folders created for it are removed again if they are still
+  empty. The button is now called **Cancel import**; to add a game without
+  images, click **Confirm** without selecting any.
+
+## 1.4.0
 
 ### Fixed
 
